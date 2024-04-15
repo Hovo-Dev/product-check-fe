@@ -63,7 +63,6 @@ const Input = forwardRef(
 
       onChange?.(event, value);
     };
-
     const onBlurHandler = (event: FocusEvent<HTMLInputElement>) => {
       onBlur?.(event);
     };
@@ -87,9 +86,9 @@ const Input = forwardRef(
             maxLength={maxLength}
             minLength={minLength}
             onFocus={onFocusHandler}
-            className={classNames("transition-all border border-black shadow-1xl pl-4 placeholder:pr-4 placeholder:text-center focus:border-gray100 focus:border-b-gray100 focus:shadow-2xl", {
+            className={classNames("transition-all w-full border border-black shadow-1xl pl-4 placeholder:pr-4 placeholder:text-center focus:border-gray100 focus:border-b-gray100 focus:shadow-2xl", {
               ['py-4 text-sm']: size === ESize.Large,
-              ['py-1 text-md max-w-[200px]']: size === ESize.Small,
+              ['py-1 text-md']: size === ESize.Small,
               ['!border-error100']: Boolean(error)
             }, className)}
             autoComplete={autoComplete}
